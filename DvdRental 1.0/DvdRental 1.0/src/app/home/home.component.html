@@ -1,0 +1,9 @@
+<body class='body'>
+<h1>
+ {{title}}
+</h1>
+<app-movies [movies]="movies"></app-movies>
+
+<h1 *ngIf="search">Search results for {{search}}</h1>
+<app-movies [movies]="searchMovies"></app-movies>
+</body>

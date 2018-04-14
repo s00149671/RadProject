@@ -1,0 +1,35 @@
+<div class="table-responsive" *ngIf='movies && movies.length'>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>
+        <button class="btn btn-primary" (click) = 'toggleImage()'>
+          {{showImage ? 'Hide':'Show'}} Image
+        </button>
+      </th>
+      <th>movie</th>
+      <th>Year</th>
+      <th>Rated</th>
+      <th>Genre</th>
+      <th>IMDB Rating</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor='let movie of movies' class="movie" [routerLink]="['/movies/' + movie.imdbID]">
+      <td>
+        <img *ngIf='showImage'
+             [src]='movie.Poster'
+             [title]='movie.Title'
+             [style.width.px]='imageWidth'
+             [style.margin.px]='imageMargin'>
+      </td>
+      <td> {{movie.Title}} </td>
+      <td> {{movie.Year}} </td>
+      <td> {{movie.Rated | convertToSpaces:'-' }}</td>
+      <td> {{movie.Genre}}</td>
+      <td><app-star-rating [rating]='movie.imdbRating'></app-star-rating></td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
