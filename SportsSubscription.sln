@@ -23,6 +23,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DvdRental 1.0(1)", "..\..\.
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "13911"
+		SlnRelativePath = "..\..\..\..\Desktop\DvdRental 1.0\DvdRental 1.0\"
 	EndProjectSection
 EndProject
 Global
